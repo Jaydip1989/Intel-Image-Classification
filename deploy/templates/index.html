@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<meta name="viewport" content="width-device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+
+		<title> Intel Image Classifier</title>
+
+		<meta name="theme-color" content="#ffffff">
+	</head>
+<body>
+
+	<div class = "very_main">
+		<header>
+			<div class="top_frame">
+				<h1> A.I based Intel Image Classifier </h1>
+			</div>
+		</header>
+
+		{% extends "base.html" %}{% block content %}
+
+		<h2>Implemented on Keras and Tensorflow</h2>
+
+		<p class="description">
+			Choose Your Image and click on Predict!
+		</p>
+
+		<div>
+			<form id="upload-file" method="post" enctype="multipart/form-data">
+				<label for="imageUpload" class="upload-label">
+					Select your Visual
+				</label>
+				<input type="file" name="file" id="imageUpload" accept=".jpg, .jpeg, .png">
+			</form>
+
+			<div class="image-section" style="display:none;">
+				<div class="img-preview">
+					<div id="imagePreview">
+					</div>
+				</div>
+				<div>
+					<button type="button" class="upload-label" id="btn-predict">Predict!</button>
+				</div>
+			</div>
+
+			<div class="loader" style="display:none;"></div>
+
+			<h3 id="result">
+				<span> </span>
+			</h3>
+		</div>
+
+		<p class="final_word">
+			Prepared by <a href="https://www.linkedin.com/in/dipit-jaywant" target="_blank">Dipit Jaywant</a>.</br>
+			Email: dipit_jaywant@yahoo.co.in</br>
+			<i> India </i> , 2019
+		</p>
+
+	</div>
+
+	{% endblock %}
+
+</body>
+</html>
